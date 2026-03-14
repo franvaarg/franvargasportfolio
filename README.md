@@ -1,16 +1,70 @@
-# React + Vite
+# Fran Vargas — Front-End Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Modern personal portfolio built with React to showcase projects, skills and front-end work.
 
-Currently, two official plugins are available:
+Live Website  
+https://franvargasportfolio.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## About
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Front-end developer focused on building clean interfaces, responsive layouts and modern web experiences.
 
-## Expanding the ESLint configuration
+This portfolio showcases selected projects including a React music blog, an ecommerce landing page and a hotel website.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Tech Stack
+
+React  
+JavaScript  
+HTML5  
+CSS3  
+Vite  
+Git
+
+---
+
+## Featured Projects
+
+### Banger Music Blog
+
+React music blog inspired by modern editorial layouts with article sections and music culture content.
+
+Live Demo  
+https://banger-music-blog.vercel.app
+
+GitHub  
+https://github.com/franvaarg/Music-blog
+
+---
+
+### Ecommerce Landing Page
+
+Responsive ecommerce landing page focused on product presentation and modern layout structure.
+
+Live Demo  
+https://franvaarg-ecommerce-landing.vercel.app
+
+GitHub  
+https://github.com/franvaarg/franvaarg-ecommerce-landing
+
+---
+
+### Hotel Landing Page
+
+Luxury hotel landing page with modern UI, responsive layout and sections for rooms, amenities and gallery.
+
+Live Demo  
+https://hotel-landing-zeta.vercel.app
+
+GitHub  
+https://github.com/franvaarg/hotel-landing
+
+---
+
+## Run Locally
+
+Clone the repository
+
