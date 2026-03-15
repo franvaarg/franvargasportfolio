@@ -5,7 +5,7 @@ export default function App() {
     {
       title: "Banger Music Blog",
       image: "/images/banger.png",
-      desc: "A modern music blog built with React featuring dynamic routing, article pages and a clean editorial layout.",
+      desc: "A modern music blog built with React featuring dynamic routing and editorial layout.",
       tech: "React • React Router • Vite",
       live: "https://banger-music-blog.vercel.app",
       github: "https://github.com/franvaarg/Music-blog",
@@ -13,7 +13,7 @@ export default function App() {
     {
       title: "Ecommerce Landing Page",
       image: "/images/store.png",
-      desc: "Responsive ecommerce landing page focused on product presentation and modern layout.",
+      desc: "Responsive ecommerce landing page focused on product presentation and modern UI.",
       tech: "HTML • CSS • JavaScript",
       live: "https://franvaarg-ecommerce-landing.vercel.app",
       github: "https://github.com/franvaarg/franvaarg-ecommerce-landing",
@@ -21,10 +21,18 @@ export default function App() {
     {
       title: "Hotel Landing Page",
       image: "/images/hotel.png",
-      desc: "Elegant hotel website with sections for rooms, gallery and amenities.",
+      desc: "Elegant hotel landing page with modern layout and strong visual hierarchy.",
       tech: "HTML • CSS • JavaScript",
       live: "https://hotel-landing-zeta.vercel.app",
       github: "https://github.com/franvaarg/hotel-landing",
+    },
+    {
+      title: "SkyCast Weather App",
+      image: "/images/weather.png",
+      desc: "React weather app that fetches real-time weather data from OpenWeather API.",
+      tech: "React • API • CSS • Vite",
+      live: "https://weather-app-one-rouge-83.vercel.app",
+      github: "#",
     },
   ];
 
@@ -32,7 +40,6 @@ export default function App() {
     <div className="site">
 
       <header className="nav">
-
         <div className="logo">FRAN VARGAS</div>
 
         <nav className="nav-links">
@@ -43,15 +50,14 @@ export default function App() {
           <a href="#contact">Contact</a>
         </nav>
 
-        <a href="#contact" className="btn-outline">Contact</a>
-
+        <a href="#contact" className="btn-outline">
+          Contact
+        </a>
       </header>
-
 
       <section id="hero" className="hero">
 
         <div className="hero-text">
-
           <p className="tag">FRONT-END DEVELOPER</p>
 
           <h1>
@@ -68,7 +74,6 @@ export default function App() {
           </p>
 
           <div className="hero-buttons">
-
             <a href="#projects" className="btn-main">
               View Projects
             </a>
@@ -76,20 +81,22 @@ export default function App() {
             <a href="#contact" className="btn-outline">
               Contact Me
             </a>
-
           </div>
-
         </div>
 
-        <div className="hero-card"></div>
+        <div className="hero-card">
+          <img
+            src="/images/profile.jpg"
+            alt="Fran Vargas"
+            className="profile-img"
+          />
+        </div>
 
       </section>
-
 
       <section id="about" className="about">
 
         <div className="about-text">
-
           <p className="tag">ABOUT</p>
 
           <h2>Simple, clean and focused front-end work.</h2>
@@ -105,7 +112,6 @@ export default function App() {
             <li>Landing page architecture</li>
             <li>Modern UI styling</li>
           </ul>
-
         </div>
 
         <div className="about-card">
@@ -120,61 +126,59 @@ export default function App() {
           </p>
 
           <div className="mini-skills">
-
             <span>React</span>
             <span>JavaScript</span>
             <span>CSS</span>
             <span>Responsive UI</span>
-
           </div>
 
         </div>
 
       </section>
 
-
       <section id="projects" className="projects">
 
         <p className="tag">PROJECTS</p>
-
         <h2>Selected Work</h2>
 
         <div className="project-grid">
 
-          {projects.map((p, i) => (
-            <div className="project-card" key={i}>
+          {projects.map((project, index) => (
+            <div className="project-card" key={index}>
 
               <img
-                src={p.image}
+                src={project.image}
                 className="project-image"
-                alt={p.title}
+                alt={project.title}
               />
 
-              <h3>{p.title}</h3>
+              <h3>{project.title}</h3>
 
-              <p>{p.desc}</p>
+              <p>{project.desc}</p>
 
-              <span className="tech">{p.tech}</span>
+              <span className="tech">{project.tech}</span>
 
               <div className="project-buttons">
 
                 <a
-                  href={p.live}
-                  className="btn-main"
+                  href={project.live}
                   target="_blank"
                   rel="noreferrer"
+                  className="btn-main"
                 >
                   Live Demo
                 </a>
 
-                <a
-                  href={p.github}
-                  className="btn-outline"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  GitHub
-                </a>
+                {project.github !== "#" && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn-outline"
+                  >
+                    GitHub
+                  </a>
+                )}
 
               </div>
 
@@ -185,7 +189,6 @@ export default function App() {
 
       </section>
 
-
       <section id="skills" className="skills">
 
         <p className="tag">SKILLS</p>
@@ -193,7 +196,6 @@ export default function App() {
         <h2>Tools and technologies</h2>
 
         <div className="skill-list">
-
           <span>HTML</span>
           <span>CSS</span>
           <span>JavaScript</span>
@@ -201,11 +203,10 @@ export default function App() {
           <span>React Router</span>
           <span>Git</span>
           <span>Vite</span>
-
+          <span>REST APIs</span>
         </div>
 
       </section>
-
 
       <section id="contact" className="contact">
 
@@ -214,7 +215,7 @@ export default function App() {
         <h2>Let's build something useful.</h2>
 
         <p className="contact-text">
-          I’m open to front-end opportunities, freelance work and
+          I'm open to front-end opportunities, freelance work and
           creative collaborations.
         </p>
 
@@ -229,18 +230,18 @@ export default function App() {
 
           <a
             href="https://github.com/franvaarg"
-            className="btn-outline"
             target="_blank"
             rel="noreferrer"
+            className="btn-outline"
           >
             GitHub
           </a>
 
           <a
             href="https://www.linkedin.com/in/franciscovargas57"
-            className="btn-outline"
             target="_blank"
             rel="noreferrer"
+            className="btn-outline"
           >
             LinkedIn
           </a>
