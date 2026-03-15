@@ -452,9 +452,20 @@ h3 {
     min-height: auto;
   }
 
-  .hero-card {
-    height: 360px;
-  }
+.hero-card {
+  width: 420px;
+  border-radius: 26px;
+  overflow: hidden;
+  border: 1px solid rgba(77, 227, 209, 0.15);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+}
+
+.profile-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
 
   .about,
   .projects,
