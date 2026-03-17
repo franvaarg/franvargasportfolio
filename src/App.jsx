@@ -45,7 +45,7 @@ export default function App() {
 
         <button
           className="menu-btn"
-          onClick={() => setMenuOpen(!menuOpen)}
+          onClick={() => setMenuOpen((prev) => !prev)}
           aria-label="Toggle menu"
           aria-expanded={menuOpen}
         >
@@ -66,18 +66,17 @@ export default function App() {
       </header>
 
       <section className="hero">
-        <div className="hero-left">
+        <div className="hero-copy">
           <p className="tag">FRONT-END DEVELOPER</p>
 
           <h1>
-            Nice to meet you! <br />
-            I'm <span>Fran Vargas</span>
+            Nice to meet you. <br />
+            I’m <span>Fran Vargas</span>
           </h1>
 
           <p className="hero-text">
-            Front-end developer focused on clean interfaces,
-            responsive layouts and modern web experiences
-            that feel clear and polished.
+            Front-end developer focused on clean interfaces, responsive layouts
+            and modern web experiences that feel clear, polished and easy to use.
           </p>
 
           <a href="#contact" className="btn-primary">
@@ -85,33 +84,34 @@ export default function App() {
           </a>
         </div>
 
-        <div className="hero-right">
-          <div className="hero-image-wrap">
-            <img src="/images/profile.png" alt="Fran Vargas" />
+        <div className="hero-visual">
+          <div className="code-bg" aria-hidden="true">
+            <span className="code-item code-1">&lt;html&gt;</span>
+            <span className="code-item code-2">display: grid;</span>
+            <span className="code-item code-3">const App = () =&gt;</span>
+            <span className="code-item code-4">fetch(api)</span>
+            <span className="code-item code-5">React</span>
+            <span className="code-item code-6">Mobile First</span>
           </div>
+
+          <img
+            src="/images/profile.png"
+            alt="Fran Vargas"
+            className="hero-photo"
+          />
         </div>
       </section>
 
       <section className="featured">
-        <div className="featured-left">
-          <div className="featured-image-wrap">
-            <img
-              src={featuredProject.image}
-              alt={featuredProject.title}
-            />
-          </div>
+        <div className="featured-image-wrap">
+          <img src={featuredProject.image} alt={featuredProject.title} />
         </div>
 
-        <div className="featured-right">
+        <div className="featured-copy">
           <p className="tag">FEATURED PROJECT</p>
-
           <h2>{featuredProject.title}</h2>
-
           <p className="project-desc">{featuredProject.desc}</p>
-
-          <p className="stack">
-            {featuredProject.tech.join(" • ")}
-          </p>
+          <p className="stack">{featuredProject.tech.join(" • ")}</p>
 
           <a
             href={featuredProject.live}
@@ -128,19 +128,19 @@ export default function App() {
         <h2 className="section-title">Projects</h2>
 
         <div className="projects-grid">
-          {projects.map((p, i) => (
-            <div className="project-card reveal-card" key={i}>
+          {projects.map((project, index) => (
+            <article className="project-card" key={index}>
               <div className="project-image-wrap">
-                <img src={p.image} alt={p.title} />
+                <img src={project.image} alt={project.title} />
               </div>
 
               <div className="project-info">
-                <h3>{p.title}</h3>
-                <p>{p.tech}</p>
+                <h3>{project.title}</h3>
+                <p>{project.tech}</p>
 
                 <div className="project-links">
                   <a
-                    href={p.live}
+                    href={project.live}
                     target="_blank"
                     rel="noreferrer"
                     className="project-btn"
@@ -149,7 +149,7 @@ export default function App() {
                   </a>
 
                   <a
-                    href={p.github}
+                    href={project.github}
                     target="_blank"
                     rel="noreferrer"
                     className="project-btn project-btn-secondary"
@@ -158,7 +158,7 @@ export default function App() {
                   </a>
                 </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </section>
@@ -177,7 +177,7 @@ export default function App() {
       </section>
 
       <section id="contact" className="contact">
-        <h2>Let's build something useful.</h2>
+        <h2>Let’s build something useful.</h2>
 
         <div className="contact-links">
           <a href="mailto:franciscovargasa57@hotmail.com">Email</a>
